@@ -1,0 +1,9 @@
+# Build
+build/
+build-*/
+
+# Stems exportados por el notebook (binarios grandes, se regeneran)
+/*.wav
+
+# Editor
+.vscode/
