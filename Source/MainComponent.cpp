@@ -1,7 +1,7 @@
 #include "MainComponent.h"
 
 // Los 7 stems, en el MISMO orden en que el notebook (stem_separation.ipynb) los exporta.
-// El botón "..." carga <nombre>.wav de la carpeta desde donde se corre la app (la raíz del proyecto).
+// El botón "..." carga <nombre>.wav de la subcarpeta stems/ (desde donde se corre la app).
 static const char* stemNames[] = { "vocals", "drums", "bass", "guitar", "piano", "other", "instrumental" };
 
 MainComponent::MainComponent()
@@ -172,8 +172,8 @@ void MainComponent::resized()
 void MainComponent::loadStems()
 {
     // Los stems ya vienen con nombre normalizado del notebook: los busca en la
-    // carpeta desde donde se corre la app (la raíz del proyecto).
-    auto directory = juce::File::getCurrentWorkingDirectory();
+    // subcarpeta stems/ (desde donde se corre la app, o sea la raíz del proyecto).
+    auto directory = juce::File::getCurrentWorkingDirectory().getChildFile ("stems");
 
     for (int i = 0; i < numStems; ++i)
     {

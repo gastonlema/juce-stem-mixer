@@ -25,7 +25,7 @@ private:
     static constexpr int numStems = 7;
 
     // ---- Botones globales (ASCII, sin iconos) ----
-    juce::TextButton loadButton { "..." };  // carga los 7 stems de la carpeta del proyecto
+    juce::TextButton loadButton { "..." };  // carga los 7 stems de la subcarpeta stems/
     juce::TextButton playButton { ">" };
     juce::TextButton stopButton { "||" };
 
