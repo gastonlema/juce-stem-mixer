@@ -2,8 +2,15 @@
 build/
 build-*/
 
-# Stems exportados por el notebook (binarios grandes, se regeneran)
-/*.wav
+# Audio: los stems se regeneran con el notebook, nunca se commitean
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# Temporales del notebook de separación
+stems/input/
 
 # Editor
 .vscode/
